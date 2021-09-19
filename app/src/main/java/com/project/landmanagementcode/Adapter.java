@@ -50,6 +50,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
         final String sellerphone=model.getSellerphone();
         final String addTimeStamp = model.getAddTimeStamp();
         final String updateTimeStamp = model.getUpdateTimeStamp();
+        //buddhisha branch comment
 
         //set views
         holder.profileIv.setImageURI(Uri.parse(image));
