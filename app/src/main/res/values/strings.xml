@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Land management code</string>
+    <string name="land_information">Land Information</string>
+    <string name="enter_land_title">Enter Land title</string>
+    <string name="enter_extent_in_perches">Enter extent in perches</string>
+    <string name="enter_price_per_perch_in_rupees">Enter price per perch(in rupees)</string>
+    <string name="enter_land_address">Enter land address</string>
+    <string name="enter_land_description">Enter land description</string>
+    <string name="enter_seller_name">Enter seller name</string>
+    <string name="enter_seller_phone_number">Enter seller phone number</string>
+    <string name="enter_seller_email">Enter seller email</string>
+    <string name="submit_information">Submit information</string>
+    <string name="edit_information">Update information</string>
+</resources>
