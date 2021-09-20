@@ -61,6 +61,7 @@ public class AddRecordActivity extends AppCompatActivity {
 
             }
         });
+        //these are the action bars below
 
         actionBar = getSupportActionBar();
         actionBar.setTitle("Add land information");
