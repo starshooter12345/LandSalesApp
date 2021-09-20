@@ -11,6 +11,13 @@
     <string name="enter_seller_email">Enter seller email</string>
     <string name="submit_information">Submit information</string>
     <string name="edit_information">Update information</string>
+    
+    <string name="cal_disco">Cut fee</string>
+    <string name="discount_title">Calculate discount </string>
+    <string name="age">Enter age</string>
+    <string name="registered">Enter number of years registered</string>
+    <string name="discount">Discount</string>
+    <string name="title_discount">Calculate Discount percentage</string>
 
 
     //pawan
