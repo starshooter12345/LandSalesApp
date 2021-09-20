@@ -11,6 +11,23 @@
     <string name="enter_seller_email">Enter seller email</string>
     <string name="submit_information">Submit information</string>
     <string name="edit_information">Update information</string>
+    
+    //pawan
+    <string name="app_bname">My Application</string>
+    <string name="Email">Email</string>
+    <string name="PhoneNumber">Phone Number</string>
+    <string name="Password">Password</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="name">Name</string>
+    <string name="nicnumber">NIC Number</string>
+    <string name="submit">SUBMIT</string>
+    <string name="rname">Enter your name </string>
+    <string name="remail">Enter your Email Address</string>
+    <string name="rcpassword">Enter your Confirm Password</string>
+    <string name="rpassword">Enter your Password</string>
+    <string name="rnicnumber">Enter your NIC Number</string>
+    <string name="rphonenumber">Enter your Phone Number</string>
+    <string name="nname">Kasun Lakmal</string>    
 
     //yasas
     <string name="app_sname">finalyasas</string>
