@@ -52,6 +52,16 @@ public class AddRecordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_record);
 
+        //newly added for calculate discount
+        Button navtodiscount= (Button) findViewById(R.id.calculatediscount);
+        navtodiscount.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(AddRecordActivity.this,CalculateDiscount.class);
+                startActivity(intent);
+
+            }
+        });
+
         actionBar = getSupportActionBar();
         actionBar.setTitle("Add land information");
         actionBar.setDisplayShowHomeEnabled(true);
