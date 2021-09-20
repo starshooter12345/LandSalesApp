@@ -11,7 +11,8 @@
     <string name="enter_seller_email">Enter seller email</string>
     <string name="submit_information">Submit information</string>
     <string name="edit_information">Update information</string>
-    
+
+
     //pawan
     <string name="app_bname">My Application</string>
     <string name="Email">Email</string>
@@ -29,7 +30,7 @@
     <string name="rphonenumber">Enter your Phone Number</string>
     <string name="nname">Kasun Lakmal</string>    
 
-    //yasas
+    //yasass
     <string name="app_sname">finalyasas</string>
     <string name="heading">Register as a Seller</string>
     <string name="input_name">Name :</string>
