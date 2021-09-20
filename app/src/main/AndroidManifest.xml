@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LandManagementCode">
         <activity
+            android:name=".CalculateDiscount"
+            android:exported="true" />
+        <activity
             android:name=".EditRecordActivity"
             android:exported="true" />
         <activity
