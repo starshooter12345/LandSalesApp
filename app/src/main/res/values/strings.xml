@@ -13,6 +13,7 @@
     <string name="edit_information">Update information</string>
 
     //yasas
+    <string name="app_sname">finalyasas</string>
     <string name="heading">Register as a Seller</string>
     <string name="input_name">Name :</string>
     <string name="input_cn">Contact Number :</string>
@@ -23,9 +24,9 @@
     <string name="pt_email">Enter your Email here</string>
     <string name="pt_pswd">Enter your Password here</string>
     <string name="tc">I agree with the terms and conditions</string>
-    <string name="submit">Create Account</string>
+    <string name="sellersubmit">Create Account</string>
     <string name="u_heading">Update Account</string>
-    <string name="u_tv_name" />
+    //<string name="u_tv_name" />
     <string name="u_view_name">Name  :</string>
     <string name="u_view_cn">Contact Number :</string>
     <string name="u_view_email">Email :</string>
