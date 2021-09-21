@@ -25,13 +25,13 @@ public class buyerDBhelper extends SQLiteOpenHelper{
         buyDB.execSQL("drop Table if exists buyers");
     }
 
-    public  Boolean insertData(String buyname, String buyemail, String buypassword, String buyphonenumber){
+    public  Boolean insertData(String name, String email, String password, String phonenumber){
         SQLiteDatabase buyDB = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put("buyname",buyname);
-        contentValues.put("buyemail",buyemail);
-        contentValues.put("buypassword", buypassword);
-        contentValues.put("buyphonenumber",buyphonenumber);
+        contentValues.put("buyname",name);
+        contentValues.put("buyemail",email);
+        contentValues.put("buypassword", password);
+        contentValues.put("buyphonenumber",phonenumber);
         long result = buyDB.insert("buyers",null,contentValues);
 
         if(result ==-1){
@@ -61,7 +61,7 @@ public class buyerDBhelper extends SQLiteOpenHelper{
 
         public boolean checkbuyemailpassword(String buyemail , String buypassword) {
         SQLiteDatabase buyDB = this.getWritableDatabase();
-        Cursor cursor = buyDB.rawQuery("select * from buyer where buyemail= ? and buypassword = ?",new String[] {buyemail,buypassword});
+        Cursor cursor = buyDB.rawQuery("select * from buyers where buyemail= ? and buypassword = ?",new String[] {buyemail,buypassword});
         if(cursor.getCount() > 0){
             return true;
         }
