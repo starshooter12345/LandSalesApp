@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LandManagementCode">
         <activity
+            android:name=".Feedback"
+            android:exported="true" />
+        <activity
             android:name=".CalculateDiscount"
             android:exported="true" />
         <activity
@@ -34,15 +37,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        //pawan
-
         <activity android:name=".home">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity android:name=".buyeraccount">
 
@@ -63,11 +65,13 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".buyerregister">
-            <!--            <intent-filter>-->
-            <!--                <action android:name="android.intent.action.MAIN" />-->
 
-            <!--                <category android:name="android.intent.category.LAUNCHER" />-->
-            <!--            </intent-filter>-->
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"

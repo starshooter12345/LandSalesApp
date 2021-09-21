@@ -11,7 +11,10 @@
     <string name="enter_seller_email">Enter seller email</string>
     <string name="submit_information">Submit information</string>
     <string name="edit_information">Update information</string>
-    
+    <string name="feed_subject">Subject of your feedback</string>
+    <string name="feed_enter">Enter feedback message</string>
+    <string name="submit_feed">Submit feedback</string>
+    <string name="give_feed">Feedback</string>
     <string name="cal_disco">Cut fee</string>
     <string name="discount_title">Calculate discount </string>
     <string name="age">Enter age</string>
@@ -35,7 +38,7 @@
     <string name="rpassword">Enter your Password</string>
     <string name="rnicnumber">Enter your NIC Number</string>
     <string name="rphonenumber">Enter your Phone Number</string>
-    <string name="nname">Kasun Lakmal</string>    
+    <string name="nname">Kasun Lakmal</string>
 
     //yasass
     <string name="app_sname">finalyasas</string>
@@ -51,7 +54,8 @@
     <string name="tc">I agree with the terms and conditions</string>
     <string name="sellersubmit">Create Account</string>
     <string name="u_heading">Update Account</string>
-    //<string name="u_tv_name" />
+    //
+    <string name="u_tv_name" />
     <string name="u_view_name">Name  :</string>
     <string name="u_view_cn">Contact Number :</string>
     <string name="u_view_email">Email :</string>

@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -30,6 +31,15 @@ public class MainActivity extends AppCompatActivity {
         showRecord();
 
         fab=findViewById(R.id.addFabButton);
+
+        //added to navigate to feedback page
+        Button navtofeed = (Button) findViewById(R.id.feedButtonn);
+        navtofeed.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(MainActivity.this,Feedback.class);
+                startActivity(intent);
+            }
+        });
 
         fab.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
