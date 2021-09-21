@@ -45,4 +45,6 @@ public class CalculateDiscount extends AppCompatActivity {
         });
 
     }
+
+
 }
