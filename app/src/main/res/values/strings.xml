@@ -78,4 +78,7 @@
     <string name="pt_login_pswd">Enter your Password here</string>
     <string name="keeploggedin">Keep me logged in</string>
     <string name="login">Login</string>
+    <string name="invalid_name">Enter valid name</string>
+    <string name="invalid_mobile">Enter valid phone number</string>
+    <string name="invalid_email">Enter valid email</string>
 </resources>
