@@ -13,6 +13,7 @@
         android:layout_width="200dp"
         android:layout_height="100dp"
         android:scaleType="centerCrop"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/selreg" />
 
     <EditText
@@ -57,6 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Contact Number here"
+        android:inputType="phone"
         android:layout_marginTop="20dp"
         android:textSize="20dp"
         android:layout_below="@+id/selemail"

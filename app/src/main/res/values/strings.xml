@@ -28,7 +28,7 @@
     <string name="rpassword">Enter your Password</string>
     <string name="rnicnumber">Enter your NIC Number</string>
     <string name="rphonenumber">Enter your Phone Number</string>
-    <string name="nname">Kasun Lakmal</string>    
+    <string name="nname">Kasun Lakmal</string>
 
     //yasass
     <string name="app_sname">finalyasas</string>
@@ -44,7 +44,8 @@
     <string name="tc">I agree with the terms and conditions</string>
     <string name="sellersubmit">Create Account</string>
     <string name="u_heading">Update Account</string>
-    //<string name="u_tv_name" />
+    //
+    <string name="u_tv_name" />
     <string name="u_view_name">Name  :</string>
     <string name="u_view_cn">Contact Number :</string>
     <string name="u_view_email">Email :</string>
