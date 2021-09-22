@@ -18,15 +18,6 @@
         <activity
             android:name=".Feedback"
             android:exported="true" />
-        
-        //yasas new
-        <activity
-                  android:name=".SellerMain"
-                  android:exported="true"/>
-        <activity 
-                  android:name=".SellerLogin"
-                  android:exported="true"/>
-        
         <activity
             android:name=".CalculateDiscount"
             android:exported="true" />
