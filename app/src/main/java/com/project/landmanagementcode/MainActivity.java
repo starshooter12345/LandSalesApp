@@ -61,12 +61,12 @@ public class MainActivity extends AppCompatActivity {
         showRecord();
     }
     //kills all start activities
-    public boolean onKeyDown(int keyCode, KeyEvent event){
+  /*  public boolean onKeyDown(int keyCode, KeyEvent event){
         if(keyCode == event.KEYCODE_BACK){
             moveTaskToBack(true);
 
         }
         return super.onKeyDown(keyCode,event);
 
-    }
+    }*/
 }
