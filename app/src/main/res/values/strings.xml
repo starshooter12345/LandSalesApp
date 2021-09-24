@@ -85,4 +85,9 @@
     <string name="invalid_name">Enter valid name</string>
     <string name="invalid_mobile">Enter valid phone number</string>
     <string name="invalid_email">Enter valid email</string>
+    <string name="rtitle">rtitle</string>
+    <string name="rarea">rarea</string>
+    <string name="rental">rental</string>
+    <string name="description">description</string>
+    <string name="rseller">rseller</string>
 </resources>

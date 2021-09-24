@@ -29,7 +29,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     }
     //insert into function
-    public long insertInfo(String landtitle,String extentinperches, String priceperperch, String landaddress,String landdescription, String sellername, String sellerphone, String selleremail,String image,String addTimeStamp, String updateTimeStamp) {
+    public long insertInfo(String landtitle,String extentinperches, String priceperperch, String landaddress,String landdescription, String sellername, String sellerphone, String selleremail,String image,String addTimeStamp, String updateTimeStamp, String rtitle, String rarea, String rental, String rdes, String rseller) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(Constants.C_LANDTITLE, landtitle);
@@ -43,6 +43,11 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(Constants.C_IMAGE,image);
         values.put(Constants.C_ADD_TIMESTAMP,addTimeStamp);
         values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);
+        values.put(Constants.C_RTITLE,rtitle);
+        values.put(Constants.C_RAREA,rarea);
+        values.put(Constants.C_RENTAL,rental);
+        values.put(Constants.C_RDES,rdes);
+        values.put(Constants.C_RSELLER,rseller);
 
 
         long id=db.insert(Constants.TABLE_NAME,null,values);
@@ -108,5 +113,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         }
         db.close();
         return arrayList;
+    }
+
+
+
+    public void insertInfo(String s, String s1, String s2, String s3, String s4) {
     }
 }
