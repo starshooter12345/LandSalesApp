@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
@@ -21,9 +22,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
     private Context context;
     private ArrayList<Model> arrayList;
 
+    //database object
+    DatabaseHelper databaseHelper;
+
     public Adapter(Context context, ArrayList<Model> arrayList) {
         this.context = context;
         this.arrayList = arrayList;
+        databaseHelper=new DatabaseHelper(context);
     }
 
 
@@ -50,6 +55,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
         final String sellerphone=model.getSellerphone();
         final String addTimeStamp = model.getAddTimeStamp();
         final String updateTimeStamp = model.getUpdateTimeStamp();
+        //buddhisha branch comment
 
         //set views
         holder.profileIv.setImageURI(Uri.parse(image));
@@ -82,7 +88,43 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
                 );
             }
         });
+        //when long press on an item, show an alert dialog for deleting an item
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener(){
+            public boolean onLongClick(View v){
+                deleteDialog(
+                        ""+id
+                );
+                return false;
+            }
+        });
     }
+
+    private void deleteDialog(final String id){
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
+        builder.setTitle("Delete");
+        builder.setMessage("Do you want to delete?");
+        builder.setCancelable(false);
+        builder.setIcon(R.drawable.ic_action_delete);
+
+        builder.setPositiveButton("Yes",new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int which){
+                databaseHelper.deleteInfo(id);
+                ((MainActivity)context).onResume();
+                Toast.makeText(context,"Deleted successfully!",Toast.LENGTH_SHORT).show();
+
+            }
+        });
+        builder.setNegativeButton("No",new DialogInterface.OnClickListener(){
+            public void onClick(DialogInterface dialog, int which){
+                dialog.cancel();
+
+            }
+        });
+
+        builder.create().show();
+
+    }
+
     private void editDialog(String position,final String id, final String landtitle,final String extentinperches,final String priceperperch,final String landaddress, final String landdescription,final String sellername,final String sellerphone,final String selleremail,final String image,final String addTimeStamp,final String updateTimeStamp){
         AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setTitle("Update");

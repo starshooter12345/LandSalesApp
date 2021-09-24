@@ -11,6 +11,16 @@
     <string name="enter_seller_email">Enter seller email</string>
     <string name="submit_information">Submit information</string>
     <string name="edit_information">Update information</string>
+    <string name="feed_subject">Subject of your feedback</string>
+    <string name="feed_enter">Enter feedback message</string>
+    <string name="submit_feed">Submit feedback</string>
+    <string name="give_feed">Feedback</string>
+    <string name="cal_disco">Cut fee</string>
+    <string name="discount_title">Calculate discount </string>
+    <string name="age">Enter age</string>
+    <string name="registered">Enter number of years registered</string>
+    <string name="discount">Discount</string>
+    <string name="title_discount">Calculate Discount percentage</string>
 
 
     //pawan
@@ -72,4 +82,7 @@
     <string name="pt_login_pswd">Enter your Password here</string>
     <string name="keeploggedin">Keep me logged in</string>
     <string name="login">Login</string>
+    <string name="invalid_name">Enter valid name</string>
+    <string name="invalid_mobile">Enter valid phone number</string>
+    <string name="invalid_email">Enter valid email</string>
 </resources>

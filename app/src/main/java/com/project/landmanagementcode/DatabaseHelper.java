@@ -72,6 +72,14 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         db.close();
     }
 
+
+    //delete information
+    public void deleteInfo(String id){
+        SQLiteDatabase db = getWritableDatabase();
+        db.delete(Constants.TABLE_NAME,Constants.C_ID + " = ? ",new String[]{id});
+        db.close();
+    }
+
     public ArrayList<Model>getAllData(String orderBy){
         ArrayList<Model> arrayList = new ArrayList<>();
         //query for selecting all info in the database
