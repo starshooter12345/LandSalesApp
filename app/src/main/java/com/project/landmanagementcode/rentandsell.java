@@ -31,7 +31,7 @@ public class rentandsell extends AppCompatActivity {
         btnbuyland.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                Intent intent = new Intent(getApplicationContext(),Buyerview.class);
                 startActivity(intent);
             }
         });
