@@ -70,7 +70,7 @@ public class rentadd extends AppCompatActivity {
         rsellers = findViewById(R.id.rseller);
         rImageView = findViewById(R.id.image);
 
-        saveInfoBt = findViewById(R.id.addButton);
+        add = findViewById(R.id.addButton);
         cameraPermissions = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
@@ -107,24 +107,18 @@ public class rentadd extends AppCompatActivity {
     }
 
     private void getData() {
-        landtitle = "" + ltitleet.getText().toString().trim();
-        extentinperches = "" + extentinpercheset.getText().toString().trim();
-        priceperperch = "" + priceperperchet.getText().toString().trim();
-        landaddress = "" + landaddresset.getText().toString().trim();
-        landdescription = "" + landdescriptionet.getText().toString().trim();
-        sellername = "" + sellernameet.getText().toString().trim();
-        sellerphone = "" + sellerphoneet.getText().toString().trim();
-        selleremail = "" + selleremailet.getText().toString().trim();
+        rtitle = "" + rtitles.getText().toString().trim();
+        rarea = "" + rareas.getText().toString().trim();
+        rental = "" + rentals.getText().toString().trim();
+        rdes = "" + rdess.getText().toString().trim();
+        rseller = "" + rsellers.getText().toString().trim();
         timestamp = "" + System.currentTimeMillis();
         dbHelper.insertInfo(
-                "" + landtitle,
-                "" + extentinperches,
-                "" + priceperperch,
-                "" + landaddress,
-                "" + landdescription,
-                "" + sellername,
-                "" + sellerphone,
-                "" + selleremail,
+                "" + rtitle,
+                "" + rarea,
+                "" + rental,
+                "" + rdes,
+                "" + rseller,
                 "" + imageUri,
                 "" + timestamp,
                 "" + timestamp
@@ -248,7 +242,7 @@ public class rentadd extends AppCompatActivity {
                 if(resultCode==RESULT_OK){
                     Uri resultUri = result.getUri();
                     imageUri=resultUri;
-                    pImageView.setImageURI(resultUri);
+                    rImageView.setImageURI(resultUri);
                 }else if(resultCode == CropImage.CROP_IMAGE_ACTIVITY_RESULT_ERROR_CODE){
                     Exception error = result.getError();
                     Toast.makeText(this, ""+error,Toast.LENGTH_SHORT).show();
@@ -259,83 +253,7 @@ public class rentadd extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
     public boolean onSupportNavigateUp(){
-        //this function moves our addrecord activity to mainactivity when back button is pressed
         onBackPressed();
         return super.onSupportNavigateUp();
     }
 }
-
-        public class rentadd extends AppCompatActivity {
-
-            Button add;
-            EditText rtitles,rsellers,rdess,rareas,rentals;
-            private ImageView rImageView;
-            ActionBar actionBar;
-
-            private static final int CAMERA_REQUEST_CODE = 100;
-            private static final int STORAGE_REQUEST_CODE = 101;
-
-            private static final int IMAGE_PICK_CAMERA_CODE = 102;
-            private static final int IMAGE_PICK_GALLERY_CODE = 103;
-
-            private String[] cameraPermissions;
-            private String[] storagePermissions;
-            private Uri imageUri;
-
-            private String rtitle, rarea, rdes, rental,rseller;
-            private DatabaseHelper dbHelper;
-
-            @Override
-            protected void onCreate(Bundle savedInstanceState) {
-                super.onCreate(savedInstanceState);
-                setContentView(R.layout.rent_add);
-
-                actionBar = getSupportActionBar();
-                actionBar.setTitle("Add rental information");
-                actionBar.setDisplayShowHomeEnabled(true);
-                actionBar.setDisplayHomeAsUpEnabled(true);
-
-                rtitle = findViewById(R.id.rtitle);
-                rarea = findViewById(R.id.rarea);
-                rental = findViewById(R.id.rental);
-                rdes = findViewById(R.id.rdes);
-                rseller = findViewById(R.id.rseller);
-                rImageView = findViewById(R.id.image);
-
-                add = findViewById(R.id.addButton);
-                cameraPermissions = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
-                storagePermissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
-
-                dbHelper = new DatabaseHelper(this);
-
-                rImageView.setOnClickListener(new View.OnClickListener() {
-                                                  @Override
-                                                  public void onClick(View v) {
-                                                      imagePickDialog();
-                                                  }
-
-
-                                                  private void imagePickDialog() {
-                                                  }
-                                              }
-                        add.setOnClickListener(new View.OnClickListener() {
-                            @Override
-                            public void onClick(View v)
-
-                            private void getData() {
-                                rtitle = "" + rtitles.getText().toString().trim();
-                                rarea = "" + rareas.getText().toString().trim();
-                                rental = "" + rentals.getText().toString().trim();
-                                rdes = "" + rdess.getText().toString().trim();
-                                rseller = "" + rsellers.getText().toString().trim();
-
-                                dbHelper.insertInfo(
-                                        "" + rtitle,
-                                        "" + rarea,
-                                        "" + rental,
-                                        "" + rdes,
-                                        "" + rseller
-
-                                );
-
-                            }
