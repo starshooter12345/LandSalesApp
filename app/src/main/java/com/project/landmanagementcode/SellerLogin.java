@@ -42,7 +42,7 @@ public class SellerLogin extends AppCompatActivity {
                     Boolean result = selDB.checkusernamePassword(user,pass);
                     if (result == true)
                     {
-                        Intent intent =new Intent(getApplicationContext(),MainActivity.class);
+                        Intent intent =new Intent(getApplicationContext(),sellerbuyandrent.class);
                         startActivity(intent);
                     }
                     else

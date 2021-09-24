@@ -22,11 +22,23 @@
             android:exported="true" />
         <activity android:name=".SellerMain"
                     android:exported="true" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        </activity>
+        <activity
+            android:name=".sellerbuyandrent"
+            android:exported="true" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        //Pawan
+        <activity
+            android:name=".rentandsell"
+            android:exported="true" />
+        <activity
+            android:name=".home"
+            android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
 
         //Buddhisha
