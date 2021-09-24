@@ -45,7 +45,7 @@ public class rentupdate extends AppCompatActivity {
     private String[] storagePermissions;
     private Uri imageUri;
 
-    private String  id,rtitle,rseller,rdes,rarea,rental;
+    private String  id,rtitle,rseller,rdes,rarea,rental, addTimeStamp, updateTimeStamp;
     private boolean editMode = false;
     private DatabaseHelper dbHelper;
 
@@ -82,6 +82,8 @@ public class rentupdate extends AppCompatActivity {
         rental = intent.getStringExtra("RENT");
         rdes = intent.getStringExtra("DESCRIPTION");
         rseller = intent.getStringExtra("RSELLER");
+        addTimeStamp = intent.getStringExtra("ADD_TIMESTAMP");
+        updateTimeStamp = intent.getStringExtra("UPDATE_TIMESTAMP");
 
         if(editMode){
             actionBar.setTitle("Update Information");
@@ -94,6 +96,8 @@ public class rentupdate extends AppCompatActivity {
             rdes = intent.getStringExtra("DESCRIPTION");
             rseller = intent.getStringExtra("RSELLER");
             imageUri = Uri.parse(intent.getStringExtra("IMAGE"));
+            addTimeStamp = intent.getStringExtra("ADD_TIMESTAMP");
+            updateTimeStamp = intent.getStringExtra("UPDATE_TIMESTAMP");
 
             rtitles.setText(rtitle);
             rareas.setText(rarea);
@@ -119,7 +123,6 @@ public class rentupdate extends AppCompatActivity {
         cameraPermissions = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
-        //initiate database object in main function
         dbHelper = new DatabaseHelper(this);
 
         rImageView.setOnClickListener(new View.OnClickListener() {
@@ -158,7 +161,9 @@ public class rentupdate extends AppCompatActivity {
                     ""+rental,
                     ""+rdes,
                     ""+rseller,
-                    ""+imageUri
+                    ""+imageUri,
+                    ""+addTimeStamp,
+                    ""+newUpdateTime
 
             );
         }
@@ -172,6 +177,9 @@ public class rentupdate extends AppCompatActivity {
                     ""+rental,
                     ""+rdes,
                     ""+rseller,
+                    "" + timestamp,
+                    "" + timestamp
+
 
                     );
         }
@@ -307,4 +315,3 @@ public class rentupdate extends AppCompatActivity {
     }
 }
 
-                }

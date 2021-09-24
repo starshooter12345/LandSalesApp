@@ -141,6 +141,10 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     }
 
-    public void updateInfo(String s, String s1, String s2, String s3, String s4, String s5, String s6) {
+
+    public void updateInfo(String s, String s1, String s2, String s3, String s4, String s5, String s6, String s7) {
+    }
+
+    public void updateInfo(String s, String s1, String s2, String s3, String s4, String s5, String s6, String s7, String s8) {
     }
 }
