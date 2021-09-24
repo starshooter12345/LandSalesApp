@@ -34,27 +34,27 @@
 
     <Button
         android:id="@+id/btnbuylogin"
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imgland"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/btnregbuy"
         android:backgroundTint="@android:color/darker_gray"
         android:textColor="@android:color/background_dark"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="-400dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="25dp"
         android:textAllCaps="false"
         android:text="Login as a Buyer" />
 
     <Button
         android:id="@+id/btnsellogin"
-        android:layout_width="95dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imgland"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/btnregsel"
         android:backgroundTint="@android:color/darker_gray"
         android:textColor="@android:color/background_dark"
         android:textAllCaps="false"
-        android:layout_marginRight="7dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="25dp"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="-400dp"
         android:text="Login as a Seller" />
 
     <Button
@@ -80,30 +80,6 @@
         android:text="Register as a Seller"
         android:textAllCaps="false" />
 
-    <Button
-        android:id="@+id/btnrent"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_marginLeft="25dp"
-        android:layout_below="@id/btnregbuy"
-        android:backgroundTint="@android:color/darker_gray"
-        android:textColor="@android:color/background_dark"
-        android:layout_marginTop="50dp"
-        android:text="Rent"
-        android:textAllCaps="false"/>
-
-    <Button
-        android:id="@+id/btnsell"
-        android:layout_width="150dp"
-        android:layout_height="60dp"
-        android:layout_below="@id/btnregbuy"
-        android:backgroundTint="@android:color/darker_gray"
-        android:textColor="@android:color/background_dark"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="50dp"
-        android:text="Sell"
-        android:layout_marginRight="25dp"
-        android:textAllCaps="false"/>
 
 
 </RelativeLayout>

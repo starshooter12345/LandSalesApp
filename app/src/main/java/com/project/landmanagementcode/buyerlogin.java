@@ -41,7 +41,7 @@ public class buyerlogin extends AppCompatActivity {
                 {
                    Boolean result = buyDB.checkbuyemailpassword(user,pass);
                    if(result==true){
-                       Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+                       Intent intent = new Intent(getApplicationContext(),rentandsell.class);
                        startActivity(intent);
                        
                    }else
