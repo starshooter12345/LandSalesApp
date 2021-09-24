@@ -1,86 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.project.landmanagementcode">
-    <!-- camera permission -->
-    <uses-permission android:name="android.permission.CAMERA" /> <!-- write external storage permission -->
-    <uses-permission
-        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        tools:ignore="ScopedStorage" />
+package com.project.landmanagementcode;
 
-    <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="Land Management"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.LandManagementCode">
-        <activity
-            android:name=".Feedback"
-            android:exported="true" />
-        <activity
-            android:name=".CalculateDiscount"
-            android:exported="true" />
-        <activity
-            android:name=".EditRecordActivity"
-            android:exported="true" />
-        <activity
-            android:name=".AddRecordActivity"
-            android:exported="true" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:label="Land Management">
-        </activity>
-       
-        //pawan
-          <activity
-            android:name=".buyerlogin"
-            android:exported="true" />
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class home extends AppCompatActivity {
+
+    Button btnbuylogin, btnselllogin, btnregbuy, btnregsell, btnrent, btnsell;
 
 
-        <activity
-            android:name=".buyerregister"
-            android:exported="true">
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.home);
 
-        </activity>
-        <activity
-            android:name=".rentandsell"
-            android:exported="true">
 
-        </activity>
+        btnbuylogin = (Button) findViewById(R.id.btnbuylogin);
+        btnselllogin = (Button) findViewById(R.id.btnsellogin);
+        btnregbuy = (Button) findViewById(R.id.btnregbuy);
+        btnregsell = (Button) findViewById(R.id.btnregsel);
 
-        <activity
-            android:name=".home"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
 
-        </activity>
-        
-        //Yasas
-        <activity
-            android:name=".SellerLogin"
-            android:exported="true" />
-        <activity android:name=".SellerMain"
-                    android:exported="true" >
-        </activity>
-        <activity
-            android:name=".sellerbuyandrent"
-            android:exported="true" />
-        
-        
-        
-        
-        
-        
-        
-        <activity
-            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-            android:theme="@style/Theme.LandManagementCode" />
-    </application>
+        btnbuylogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),buyerlogin.class);
+                startActivity(intent);
+            }
+        });
 
-</manifest>
+        btnselllogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),SellerLogin.class);
+                startActivity(intent);
+            }
+        });
+
+        btnregbuy.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),buyerregister.class);
+                startActivity(intent);
+            }
+        });
+
+        btnregsell.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(),SellerMain.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+    }
+
+
+}
