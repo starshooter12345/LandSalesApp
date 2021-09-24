@@ -18,16 +18,23 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.basgeekball.awesomevalidation.AwesomeValidation;
+import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.basgeekball.awesomevalidation.utility.RegexTemplate;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
 
 public class AddRecordActivity extends AppCompatActivity {
+    //added for validation
+    AwesomeValidation awesomeValidation;
+
     private ImageView pImageView;
     private EditText ltitleet, extentinpercheset, priceperperchet, landaddresset, landdescriptionet, sellernameet, sellerphoneet, selleremailet;
     Button saveInfoBt;
@@ -52,6 +59,16 @@ public class AddRecordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_record);
 
+        //newly added for calculate discount
+        Button navtodiscount= (Button) findViewById(R.id.calculatediscount);
+        navtodiscount.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View view) {
+                Intent intent = new Intent(AddRecordActivity.this,CalculateDiscount.class);
+                startActivity(intent);
+
+            }
+        });
+        //these are the action bars below
         actionBar = getSupportActionBar();
         actionBar.setTitle("Add land information");
         actionBar.setDisplayShowHomeEnabled(true);
@@ -71,6 +88,15 @@ public class AddRecordActivity extends AppCompatActivity {
         cameraPermissions = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
+        //Initialize validation style
+        awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
+        //Add validation for seller name
+        awesomeValidation.addValidation(this,R.id.sellername,
+            RegexTemplate.NOT_EMPTY,R.string.invalid_name);
+        //add validation for seller email
+        awesomeValidation.addValidation(this,R.id.selleremail
+                , Patterns.EMAIL_ADDRESS,R.string.invalid_email);
+
         //initiate database object in main function
         dbHelper = new DatabaseHelper(this);
 
@@ -84,9 +110,23 @@ public class AddRecordActivity extends AppCompatActivity {
         saveInfoBt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                getData();
-                startActivity(new Intent(AddRecordActivity.this,MainActivity.class));
-                Toast.makeText(AddRecordActivity.this,"Added successfully !",Toast.LENGTH_SHORT).show();
+                //check validations
+                //if(awesomeValidation.validate()){
+                    //on suceess
+                   // Toast.makeText(getApplicationContext()
+                         //   ,"Form validated successsfully!",Toast.LENGTH_SHORT).show();
+               // }else{
+                 //   Toast.makeText(getApplicationContext()
+                      //      ,"Form validation failed!",Toast.LENGTH_SHORT).show();
+                //}
+                if(awesomeValidation.validate()) {
+                    getData();
+                    startActivity(new Intent(AddRecordActivity.this, MainActivity.class));
+                    Toast.makeText(AddRecordActivity.this, "Added successfully !", Toast.LENGTH_SHORT).show();
+                }
+                else{
+                    Toast.makeText(AddRecordActivity.this, "Form not validated !", Toast.LENGTH_SHORT).show();
+                }
 
 
             }
