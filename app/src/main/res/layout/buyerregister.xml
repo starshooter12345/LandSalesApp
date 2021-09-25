@@ -83,7 +83,7 @@
         android:id="@+id/btnbuylogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go to Sing in Page"
+        android:text="Go to Sign in Page"
         android:textAllCaps="false"
         android:layout_below="@id/btnbuyreg"
         android:layout_marginTop="20dp"

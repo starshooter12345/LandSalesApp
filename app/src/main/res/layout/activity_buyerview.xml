@@ -13,6 +13,19 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         tools:listitem="@layout/buyer_row" />
 
+    <Button
+        android:id="@+id/feedButtonn"
+        android:layout_width="115dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="467dp"
+        android:layout_marginEnd="44dp"
+        android:background="@drawable/background"
+        android:text="@string/give_feed"
+        android:textColor="@color/blackColor"
+        android:textStyle="bold" />
+
 
 
 

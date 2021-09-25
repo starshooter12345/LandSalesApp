@@ -29,6 +29,16 @@ public class Buyerview extends AppCompatActivity {
 
         showRecord();
 
+        //added to navigate to feedback
+        //added to navigate to feedback page
+        Button navtofeed = (Button) findViewById(R.id.feedButtonn);
+        navtofeed.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(Buyerview.this,Feedback.class);
+                startActivity(intent);
+            }
+        });
+
        // fab=findViewById(R.id.addFabButton);
 
         //added to navigate to feedback page
@@ -50,7 +60,7 @@ public class Buyerview extends AppCompatActivity {
         });*/
     }
     private void showRecord(){
-        Adapter adapter = new Adapter(Buyerview.this, databaseHelper.getAllData(Constants.C_ADD_TIMESTAMP + " DESC"));
+        BuyerAdapter adapter = new BuyerAdapter(Buyerview.this, databaseHelper.getAllData(Constants.C_ADD_TIMESTAMP + " DESC"));
         //because last added record shows on top
         tRecyclerView.setAdapter(adapter);
 
