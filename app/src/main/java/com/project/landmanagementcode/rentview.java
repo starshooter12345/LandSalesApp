@@ -12,15 +12,16 @@ import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class rentmain extends AppCompatActivity {
+public class rentview extends AppCompatActivity {
     FloatingActionButton flac;
     ActionBar actionBar;
     RecyclerView mRecyclerView;
     DatabaseHelper databaseHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.rent_view);
 
         actionBar = getSupportActionBar();
         actionBar.setTitle("Rental properties");
@@ -30,23 +31,26 @@ public class rentmain extends AppCompatActivity {
 
         showRecord();
 
-        flac=findViewById(R.id.addFabButton);
+        flac = findViewById(R.id.addFabButton);
 
 
-        flac.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v){
-                Intent intent = new Intent(rentmain.this, AddRecordActivity.class);
-                intent.putExtra("editMode",false);
+        flac.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(rentview.this, AddRecordActivity.class);
+                intent.putExtra("editMode", false);
                 startActivity(intent);
             }
         });
     }
-    private void showRecord(){
-        Adapter adapter = new Adapter(rentmain.this, databaseHelper.getAllData(Constants.C_ADD_TIMESTAMP + " DESC"));
+
+    private void showRecord() {
+        Adapter adapter = new Adapter(rentview.this, databaseHelper.getAllData(Constants.C_ADD_TIMESTAMP + " DESC"));
         mRecyclerView.setAdapter(adapter);
 
     }
-    protected void onResume(){
+
+    protected void onResume() {
         super.onResume();
         showRecord();
     }
+}
