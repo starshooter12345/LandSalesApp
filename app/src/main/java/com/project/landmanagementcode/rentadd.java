@@ -94,11 +94,11 @@ public class rentadd extends AppCompatActivity {
 
                 if(awesomeValidation.validate()) {
                     getData();
-                    startActivity(new Intent(AddRecordActivity.this, MainActivity.class));
-                    Toast.makeText(AddRecordActivity.this, "Added successfully !", Toast.LENGTH_SHORT).show();
+                    startActivity(new Intent(rentadd.this, MainActivity.class));
+                    Toast.makeText(rentadd.this, "Added successfully !", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(AddRecordActivity.this, "Form not validated !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(rentadd.this, "Form not validated !", Toast.LENGTH_SHORT).show();
                 }
 
 
@@ -159,7 +159,6 @@ public class rentadd extends AppCompatActivity {
         Intent galleryIntent = new Intent(Intent.ACTION_PICK);
         galleryIntent.setType("image/*");
         startActivityForResult(galleryIntent, IMAGE_PICK_GALLERY_CODE);
-
 
     }
     private void pickFromCamera(){

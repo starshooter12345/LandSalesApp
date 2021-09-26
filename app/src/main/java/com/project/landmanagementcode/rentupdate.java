@@ -53,7 +53,7 @@ public class rentupdate extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_edit_record);
+        setContentView(R.layout.rent_update);
         actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -136,8 +136,8 @@ public class rentupdate extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 getData();
-                startActivity(new Intent(EditRecordActivity.this,MainActivity.class));
-                Toast.makeText(EditRecordActivity.this,"Updated successfully",Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(rentupdate.this,MainActivity.class));
+                Toast.makeText(rentupdate.this,"Updated successfully",Toast.LENGTH_SHORT).show();
 
 
             }
@@ -309,7 +309,6 @@ public class rentupdate extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
     }
     public boolean onSupportNavigateUp(){
-        //this function moves our addrecord activity to mainactivity when back button is pressed
         onBackPressed();
         return super.onSupportNavigateUp();
     }
