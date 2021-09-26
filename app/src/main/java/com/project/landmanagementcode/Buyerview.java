@@ -6,54 +6,63 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity {
-    FloatingActionButton fab;
+public class Buyerview extends AppCompatActivity {
+   // FloatingActionButton fab;
     ActionBar actionBar;
-    RecyclerView mRecyclerView;
+    RecyclerView tRecyclerView;
     DatabaseHelper databaseHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_buyerview);
 
         actionBar = getSupportActionBar();
         actionBar.setTitle("List of Lands");
 
-        mRecyclerView = findViewById(R.id.recyclerView);
+        tRecyclerView = findViewById(R.id.srecyclerView);
         databaseHelper = new DatabaseHelper(this);
 
         showRecord();
 
-        fab=findViewById(R.id.addFabButton);
-
+        //added to navigate to feedback
         //added to navigate to feedback page
         Button navtofeed = (Button) findViewById(R.id.feedButtonn);
+        navtofeed.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View view){
+                Intent intent = new Intent(Buyerview.this,Feedback.class);
+                startActivity(intent);
+            }
+        });
+
+       // fab=findViewById(R.id.addFabButton);
+
+        //added to navigate to feedback page
+      /*  Button navtofeed = (Button) findViewById(R.id.feedButtonn);
         navtofeed.setOnClickListener(new View.OnClickListener(){
             public void onClick(View view){
                 Intent intent = new Intent(MainActivity.this,Feedback.class);
                 startActivity(intent);
             }
-        });
+        });*/
 
-        fab.setOnClickListener(new View.OnClickListener(){
+        /*fab.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 //create a new activity
                 Intent intent = new Intent(MainActivity.this, AddRecordActivity.class);
                 intent.putExtra("editMode",false);
                 startActivity(intent);
             }
-        });
+        });*/
     }
     private void showRecord(){
-        Adapter adapter = new Adapter(MainActivity.this, databaseHelper.getAllData(Constants.C_ADD_TIMESTAMP + " DESC"));
+        BuyerAdapter adapter = new BuyerAdapter(Buyerview.this, databaseHelper.getAllData(Constants.C_ADD_TIMESTAMP + " DESC"));
         //because last added record shows on top
-        mRecyclerView.setAdapter(adapter);
+        tRecyclerView.setAdapter(adapter);
 
     }
     protected void onResume(){

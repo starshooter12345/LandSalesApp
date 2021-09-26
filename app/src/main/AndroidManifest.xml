@@ -16,6 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LandManagementCode">
         <activity
+            android:name=".Buyerview"
+            android:exported="true" />
+        <activity
             android:name=".Feedback"
             android:exported="true" />
         <activity
@@ -30,49 +33,34 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="Land Management">
+            android:label="Land Management"></activity>
+        <activity
+            android:name=".buyerlogin"
+            android:exported="true" />
+        <activity
+            android:name=".buyerregister"
+            android:exported="true"></activity>
+        <activity
+            android:name=".rentandsell"
+            android:exported="true"></activity>
+        <activity
+            android:name=".sellerbuyandrent"
+            android:exported="true"></activity>
+        <activity
+            android:name=".home"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".home">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity android:name=".buyeraccount">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity android:name=".buyerupdate">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
-        <activity android:name=".buyerregister">
-
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
-
-
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
-        </activity>
+        <activity
+            android:name=".SellerLogin"
+            android:exported="true" />
+        <activity
+            android:name=".SellerMain"
+            android:exported="true"></activity>
         <activity
             android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
             android:theme="@style/Theme.LandManagementCode" />
