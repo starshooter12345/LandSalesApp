@@ -13,7 +13,7 @@ import android.widget.Button;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class rentmain extends AppCompatActivity {
-    FloatingActionButton fab;
+    FloatingActionButton flac;
     ActionBar actionBar;
     RecyclerView mRecyclerView;
     DatabaseHelper databaseHelper;
@@ -30,29 +30,19 @@ public class rentmain extends AppCompatActivity {
 
         showRecord();
 
-        fab=findViewById(R.id.addFabButton);
+        flac=findViewById(R.id.addFabButton);
 
-        //added to navigate to feedback page
-        Button navtofeed = (Button) findViewById(R.id.feedButtonn);
-        navtofeed.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View view){
-                Intent intent = new Intent(MainActivity.this,Feedback.class);
-                startActivity(intent);
-            }
-        });
 
-        fab.setOnClickListener(new View.OnClickListener(){
+        flac.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                //create a new activity
-                Intent intent = new Intent(MainActivity.this, AddRecordActivity.class);
+                Intent intent = new Intent(rentmain.this, AddRecordActivity.class);
                 intent.putExtra("editMode",false);
                 startActivity(intent);
             }
         });
     }
     private void showRecord(){
-        Adapter adapter = new Adapter(MainActivity.this, databaseHelper.getAllData(Constants.C_ADD_TIMESTAMP + " DESC"));
-        //because last added record shows on top
+        Adapter adapter = new Adapter(rentmain.this, databaseHelper.getAllData(Constants.C_ADD_TIMESTAMP + " DESC"));
         mRecyclerView.setAdapter(adapter);
 
     }
@@ -60,13 +50,3 @@ public class rentmain extends AppCompatActivity {
         super.onResume();
         showRecord();
     }
-    //kills all start activities
-  /*  public boolean onKeyDown(int keyCode, KeyEvent event){
-        if(keyCode == event.KEYCODE_BACK){
-            moveTaskToBack(true);
-
-        }
-        return super.onKeyDown(keyCode,event);
-
-    }*/
-}
