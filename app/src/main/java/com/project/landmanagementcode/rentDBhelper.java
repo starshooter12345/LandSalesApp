@@ -19,18 +19,18 @@ public class rentDBhelper extends SQLiteOpenHelper{
     private String rseller;
 
     public rentDBhelper(@Nullable Context context){
-        super(context,Constants.DB_NAME,null,Constants.DB_VERSION);
+        super(context,rentConstant.DB_NAME,null,rentConstant.DB_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(Constants.CREATE_TABLE);
+        db.execSQL(rentConstant.CREATE_TABLE);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " +Constants.TABLE_NAME);
+        db.execSQL("DROP TABLE IF EXISTS " +rentConstant.TABLE_NAME);
         onCreate(db);
 
     }
@@ -56,7 +56,7 @@ public class rentDBhelper extends SQLiteOpenHelper{
 
 
 
-        long id=db.insert(Constants.TABLE_NAME,null,values);
+        long id=db.insert(rentConstant.TABLE_NAME,null,values);
         db.close();
         return id;
 
