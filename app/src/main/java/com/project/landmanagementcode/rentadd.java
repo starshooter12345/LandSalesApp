@@ -48,7 +48,7 @@ public class rentadd extends AppCompatActivity {
     private Uri imageUri;
 
     private String rtitle, rarea, rdes, rental,rseller, timestamp;
-    private DatabaseHelper dbHelper;
+    private rentDBhelper dbHelper;
 
 
     @Override
@@ -74,7 +74,7 @@ public class rentadd extends AppCompatActivity {
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
         awesomeValidation.addValidation(this,R.id.rseller,
                 RegexTemplate.NOT_EMPTY,R.string.invalid_name);
-        dbHelper = new DatabaseHelper(this);
+        dbHelper = new rentDBhelper(this);
         rImageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
