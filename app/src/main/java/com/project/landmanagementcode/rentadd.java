@@ -85,7 +85,7 @@ public class rentadd extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(awesomeValidation.validate()) {
-                    getData();
+                    //getData();
                     startActivity(new Intent(rentadd.this, MainActivity.class));
                     Toast.makeText(rentadd.this, "Added successfully !", Toast.LENGTH_SHORT).show();
                 }
@@ -98,7 +98,7 @@ public class rentadd extends AppCompatActivity {
         });
     }
 
-    private void getData() {
+  /*  private void getData() {
         rtitle = "" + rtitles.getText().toString().trim();
         rarea = "" + rareas.getText().toString().trim();
         rental = "" + rentals.getText().toString().trim();
@@ -118,7 +118,7 @@ public class rentadd extends AppCompatActivity {
         );
         //Toast.makeText(this, "Record added to id:" + id, Toast.LENGTH_SHORT).show();
 
-    }
+    }*/
 
     private void imagePickDialog(){
         String[]options={"Camera","Gallery"};
