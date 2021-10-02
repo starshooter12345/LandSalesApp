@@ -86,9 +86,9 @@ public class rentDBhelper extends SQLiteOpenHelper{
         values.put(rentConstant.C_ADD_TIMESTAMP,addTimeStamp);
         values.put(rentConstant.C_UPDATE_TIMESTAMP,updateTimeStamp);
 
-        values.put(Constants.C_IMAGE,image);
-        values.put(Constants.C_ADD_TIMESTAMP,addTimeStamp);
-        values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);
+        values.put(rentConstant.C_IMAGE,image);
+        values.put(rentConstant.C_ADD_TIMESTAMP,addTimeStamp);
+        values.put(rentConstant.C_UPDATE_TIMESTAMP,updateTimeStamp);
 
 
 
