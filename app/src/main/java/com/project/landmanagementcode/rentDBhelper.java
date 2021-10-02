@@ -74,7 +74,7 @@ public class rentDBhelper extends SQLiteOpenHelper{
     }
 
     //update info function
-    /*public void updateInfo(String id,String image,String addTimeStamp, String updateTimeStamp) {
+    public void updateInfo(String id,String image,String addTimeStamp, String updateTimeStamp) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(rentConstant.C_RSELLER,rseller);
@@ -85,14 +85,10 @@ public class rentDBhelper extends SQLiteOpenHelper{
         values.put(rentConstant.C_IMAGE,image);
         values.put(rentConstant.C_ADD_TIMESTAMP,addTimeStamp);
         values.put(rentConstant.C_UPDATE_TIMESTAMP,updateTimeStamp);
-        values.put(Constants.C_RSELLER,rseller);
-        values.put(Constants.C_RTITLE,rtitle);
-        values.put(Constants.C_RENTAL,rental);
-        values.put(Constants.C_RDES,rdes);
-        values.put(Constants.C_RAREA,rarea);
+
         values.put(Constants.C_IMAGE,image);
         values.put(Constants.C_ADD_TIMESTAMP,addTimeStamp);
-        values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);*/
+        values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);
 
 
 
@@ -101,9 +97,9 @@ public class rentDBhelper extends SQLiteOpenHelper{
 
         db.update(rentConstant.TABLE_NAME,values,rentConstant.C_ID + " = ?", new String[]{id});
 
-       /* db.update(Constants.TABLE_NAME,values,Constants.C_ID + " = ?", new String[]{id});
+       /* db.update(Constants.TABLE_NAME,values,Constants.C_ID + " = ?", new String[]{id});*/
         db.close();
-    }*/
+    }
 
 
     //delete information
@@ -113,26 +109,26 @@ public class rentDBhelper extends SQLiteOpenHelper{
         db.close();
     }
 
-    public ArrayList<Model>getAllData(String orderBy){
+    public ArrayList<Model>getAllData(String orderBy) {
         ArrayList<Model> arrayList = new ArrayList<>();
         //query for selecting all info in the database
         String selectQuery = "SELECT * FROM " + rentConstant.TABLE_NAME + " ORDER BY " + orderBy;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
-        if(cursor.moveToNext()){
-            do{
+        if (cursor.moveToNext()) {
+            do {
 
                 Model model = new Model(
-                        ""+cursor.getInt(cursor.getColumnIndex(rentConstant.C_ID)),
-                        ""+cursor.getString(cursor.getColumnIndex(rentConstant.C_IMAGE)),
-                        ""+cursor.getString(cursor.getColumnIndex(rentConstant.C_RTITLE)),
-                        ""+cursor.getString(cursor.getColumnIndex(rentConstant.C_RAREA)),
-                        ""+cursor.getString(cursor.getColumnIndex(rentConstant.C_RENTAL)),
-                        ""+cursor.getString(cursor.getColumnIndex(rentConstant.C_RDES)),
-                        ""+cursor.getString(cursor.getColumnIndex(rentConstant.C_RSELLER)),
-                        ""+cursor.getString(cursor.getColumnIndex(rentConstant.C_ADD_TIMESTAMP)),
-                        ""+cursor.getString(cursor.getColumnIndex(rentConstant.C_UPDATE_TIMESTAMP))
+                        "" + cursor.getInt(cursor.getColumnIndex(rentConstant.C_ID)),
+                        "" + cursor.getString(cursor.getColumnIndex(rentConstant.C_IMAGE)),
+                        "" + cursor.getString(cursor.getColumnIndex(rentConstant.C_RTITLE)),
+                        "" + cursor.getString(cursor.getColumnIndex(rentConstant.C_RAREA)),
+                        "" + cursor.getString(cursor.getColumnIndex(rentConstant.C_RENTAL)),
+                        "" + cursor.getString(cursor.getColumnIndex(rentConstant.C_RDES)),
+                        "" + cursor.getString(cursor.getColumnIndex(rentConstant.C_RSELLER)),
+                        "" + cursor.getString(cursor.getColumnIndex(rentConstant.C_ADD_TIMESTAMP)),
+                        "" + cursor.getString(cursor.getColumnIndex(rentConstant.C_UPDATE_TIMESTAMP)));
 
                /* Model model = new Model(
                         ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
@@ -144,19 +140,10 @@ public class rentDBhelper extends SQLiteOpenHelper{
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_RSELLER)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_ADD_TIMESTAMP)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_UPDATE_TIMESTAMP))
-                );
-                arrayList.add(model);*/
-            }while(cursor.moveToNext());
+                );*/
+                arrayList.add(model);
+            } while (cursor.moveToNext());
         }
         db.close();
         return arrayList;
-    }
-
-
-
-
-    public void updateInfo(String s, String s1, String s2, String s3, String s4, String s5, String s6, String s7) {
-    }
-
-    public void updateInfo(String s, String s1, String s2, String s3, String s4, String s5, String s6, String s7, String s8) {
-    }
+    }}
