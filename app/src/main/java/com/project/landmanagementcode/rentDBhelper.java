@@ -77,7 +77,6 @@ public class rentDBhelper extends SQLiteOpenHelper{
     /*public void updateInfo(String id,String image,String addTimeStamp, String updateTimeStamp) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
-
         values.put(rentConstant.C_RSELLER,rseller);
         values.put(rentConstant.C_RTITLE,rtitle);
         values.put(rentConstant.C_RENTAL,rental);
@@ -86,7 +85,6 @@ public class rentDBhelper extends SQLiteOpenHelper{
         values.put(rentConstant.C_IMAGE,image);
         values.put(rentConstant.C_ADD_TIMESTAMP,addTimeStamp);
         values.put(rentConstant.C_UPDATE_TIMESTAMP,updateTimeStamp);
-
         values.put(Constants.C_RSELLER,rseller);
         values.put(Constants.C_RTITLE,rtitle);
         values.put(Constants.C_RENTAL,rental);
@@ -104,7 +102,6 @@ public class rentDBhelper extends SQLiteOpenHelper{
         db.update(rentConstant.TABLE_NAME,values,rentConstant.C_ID + " = ?", new String[]{id});
 
        /* db.update(Constants.TABLE_NAME,values,Constants.C_ID + " = ?", new String[]{id});
-
         db.close();
     }*/
 
@@ -147,7 +144,6 @@ public class rentDBhelper extends SQLiteOpenHelper{
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_RSELLER)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_ADD_TIMESTAMP)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_UPDATE_TIMESTAMP))
-
                 );
                 arrayList.add(model);*/
             }while(cursor.moveToNext());
