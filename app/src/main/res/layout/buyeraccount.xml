@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".buyeraccount">
+    tools:context="com.project.landmanagementcode.buyeraccount">
 
     <TextView
         android:id="@+id/myaccount"
@@ -64,7 +64,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="56dp"
-        android:text="NIC Number"
+        android:text="Password"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +91,7 @@
         android:layout_marginTop="35dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Kalana Anjana"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/acc_name"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -105,7 +105,7 @@
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="kalana89@gmail.com"
+        android:text=""
         app:layout_constraintStart_toEndOf="@+id/acc_email"
         app:layout_constraintTop_toBottomOf="@+id/uct_name" />
 
@@ -117,7 +117,7 @@
         android:layout_marginTop="35dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="198977765"
+        android:text=""
         app:layout_constraintStart_toEndOf="@+id/acc_nic"
         app:layout_constraintTop_toBottomOf="@+id/uct_email" />
 
@@ -129,7 +129,7 @@
         android:layout_marginTop="24dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="0778997645"
+        android:text=""
         app:layout_constraintStart_toEndOf="@+id/acc_phone"
         app:layout_constraintTop_toBottomOf="@+id/uct_nic" />
 

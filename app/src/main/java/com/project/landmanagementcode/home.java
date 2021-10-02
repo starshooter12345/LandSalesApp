@@ -6,6 +6,7 @@ import android.view.View;
 import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
+import com.project.landmanagementcode.R;
 
 public class home extends AppCompatActivity {
 
@@ -18,10 +19,10 @@ public class home extends AppCompatActivity {
         setContentView(R.layout.home);
 
 
-        btnbuylogin = (Button) findViewById(R.id.btnbuylogin);
-        btnselllogin = (Button) findViewById(R.id.btnsellogin);
-        btnregbuy = (Button) findViewById(R.id.btnregbuy);
-        btnregsell = (Button) findViewById(R.id.btnregsel);
+        btnbuylogin = findViewById(R.id.btnbuylogin);
+        btnselllogin = findViewById(R.id.btnsellogin);
+        btnregbuy = findViewById(R.id.btnregbuy);
+        btnregsell = findViewById(R.id.btnregsel);
 
 
 
@@ -36,8 +37,8 @@ public class home extends AppCompatActivity {
         btnselllogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),buyerlogin.class);
-                startActivity(intent);
+/*                Intent intent = new Intent(getApplicationContext(),SellerLogin.class);
+                startActivity(intent);*/
             }
         });
 
@@ -52,8 +53,8 @@ public class home extends AppCompatActivity {
         btnregsell.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),buyerlogin.class);
-                startActivity(intent);
+/*                Intent intent = new Intent(getApplicationContext(),SellerMain.class);
+                startActivity(intent);*/
             }
         });
 

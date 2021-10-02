@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bghome"
-    tools:context=".home">
+    tools:context="com.project.landmanagementcode.home">
 
     <ImageView
         android:id="@+id/imgland"
@@ -37,12 +37,12 @@
         android:layout_width="150dp"
         android:layout_height="60dp"
         android:layout_below="@id/btnregbuy"
-        android:backgroundTint="@android:color/darker_gray"
-        android:textColor="@android:color/background_dark"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="25dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Login as a Buyer"
         android:textAllCaps="false"
-        android:text="Login as a Buyer" />
+        android:textColor="@android:color/background_dark" />
 
     <Button
         android:id="@+id/btnsellogin"

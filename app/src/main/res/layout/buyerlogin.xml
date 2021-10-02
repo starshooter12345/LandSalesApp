@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg"
     android:padding="10dp"
-    tools:context=".buyerlogin">
+    tools:context="com.project.landmanagementcode.buyerlogin">
 
     <ImageView
         android:id="@+id/imageView"
