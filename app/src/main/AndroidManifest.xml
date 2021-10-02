@@ -49,6 +49,16 @@
         <activity
             android:name=".sellerbuyandrent"
             android:exported="true" />
+        //shamila
+        <activity
+            android:name=".rentadd"
+            android:exported="true" />
+        <activity
+            android:name=".rentupdate"
+            android:exported="true" />
+        <activity
+            android:name=".rentview"
+            android:exported="true" />
         <activity
             android:name=".home"
             android:exported="true">
