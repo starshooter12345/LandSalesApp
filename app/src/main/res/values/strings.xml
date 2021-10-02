@@ -54,6 +54,14 @@
     <string name="tc">I agree with the terms and conditions</string>
     <string name="sellersubmit">Create Account</string>
     <string name="u_heading">Update Account</string>
+
+    //Shamila
+    <string name="utitle">Update Title</string>
+    <string name="uarea">Update Area</string>
+    <string name="urental">Update Rental</string>
+    <string name="udes">Update Description</string>
+    <string name="useller">Update Seller</string>
+
     //
     <string name="u_tv_name" />
     <string name="u_view_name">Name  :</string>
