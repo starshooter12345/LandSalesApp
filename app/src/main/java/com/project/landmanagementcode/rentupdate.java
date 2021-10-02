@@ -139,7 +139,7 @@ public class rentupdate extends AppCompatActivity {
         rdes = "" + rdess.getText().toString().trim();
         rseller = "" + rsellers.getText().toString().trim();
 
-        if(editMode){
+      /*  if(editMode){
             String newUpdateTime = ""+System.currentTimeMillis();
             dbHelper.updateInfo(
                     "" + id,
@@ -152,8 +152,8 @@ public class rentupdate extends AppCompatActivity {
                     ""+addTimeStamp,
                     ""+newUpdateTime
             );
-        }
-        else {
+        }*/
+      /*  else {
             String timestamp = "" + System.currentTimeMillis();
             dbHelper.updateInfo(
                     "" + id,
@@ -167,7 +167,7 @@ public class rentupdate extends AppCompatActivity {
 
 
                     );
-        }
+        }*/
 
     }
 

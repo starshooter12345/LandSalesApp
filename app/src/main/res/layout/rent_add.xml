@@ -99,5 +99,5 @@
         android:text="ADD LAND"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toEndOf="@+id/uimage"
-        app:layout_constraintTop_toRightOf="@+id/uimage" />
+        />
 </androidx.constraintlayout.widget.ConstraintLayout>

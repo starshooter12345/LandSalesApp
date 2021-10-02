@@ -12,11 +12,11 @@ import java.util.ArrayList;
 
 public class DatabaseHelper extends SQLiteOpenHelper{
 
-    private String rtitle;
+    /*private String rtitle;
     private String rarea;
     private String rental;
     private String rdes;
-    private String rseller;
+    private String rseller;*/
 
     public DatabaseHelper(@Nullable Context context){
         super(context,Constants.DB_NAME,null,Constants.DB_VERSION);
@@ -35,12 +35,8 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
     }
     //insert into function
-    public long insertInfo(String landtitle,String extentinperches, String priceperperch, String landaddress,String landdescription, String sellername, String sellerphone, String selleremail,String image,String addTimeStamp, String updateTimeStamp, String rtitle, String rarea, String rental, String rdes, String rseller) {
-        this.rtitle = rtitle;
-        this.rarea = rarea;
-        this.rental = rental;
-        this.rdes = rdes;
-        this.rseller = rseller;
+    public long insertInfo(String landtitle,String extentinperches, String priceperperch, String landaddress,String landdescription, String sellername, String sellerphone, String selleremail,String image,String addTimeStamp, String updateTimeStamp) {
+
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(Constants.C_LANDTITLE, landtitle);
@@ -55,11 +51,11 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(Constants.C_ADD_TIMESTAMP,addTimeStamp);
         values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);
 
-        values.put(Constants.C_RTITLE,rtitle);
+        /*values.put(Constants.C_RTITLE,rtitle);
         values.put(Constants.C_RAREA,rarea);
         values.put(Constants.C_RENTAL,rental);
         values.put(Constants.C_RDES,rdes);
-        values.put(Constants.C_RSELLER,rseller);
+        values.put(Constants.C_RSELLER,rseller);*/
 
 
 
@@ -85,11 +81,11 @@ public class DatabaseHelper extends SQLiteOpenHelper{
         values.put(Constants.C_ADD_TIMESTAMP,addTimeStamp);
         values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);
 
-        values.put(Constants.C_RSELLER,rseller);
+       /* values.put(Constants.C_RSELLER,rseller);
         values.put(Constants.C_RTITLE,rtitle);
         values.put(Constants.C_RENTAL,rental);
         values.put(Constants.C_RDES,rdes);
-        values.put(Constants.C_RAREA,rarea);
+        values.put(Constants.C_RAREA,rarea);*/
 
 
 
@@ -138,12 +134,12 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
 
 
-    public void updateInfo(String s, String s1, String s2, String s3, String s4, String s5, String s6, String s7) {
+   /* public void updateInfo(String s, String s1, String s2, String s3, String s4, String s5, String s6, String s7) {
     }
 
     public void updateInfo(String s, String s1, String s2, String s3, String s4, String s5, String s6, String s7, String s8) {
     }
 
     public void insertInfo(String s, String s1, String s2, String s3, String s4, String s5, String s6, String s7) {
-    }
+    }*/
 }
