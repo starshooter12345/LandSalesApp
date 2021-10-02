@@ -71,14 +71,14 @@ public class rentDBhelper extends SQLiteOpenHelper{
         values.put(rentConstant.C_RENTAL,rental);
         values.put(rentConstant.C_RDES,rdes);
         values.put(rentConstant.C_RAREA,rarea);
-        values.put(Constants.C_IMAGE,image);
-        values.put(Constants.C_ADD_TIMESTAMP,addTimeStamp);
-        values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);
+        values.put(rentConstant.C_IMAGE,image);
+        values.put(rentConstant.C_ADD_TIMESTAMP,addTimeStamp);
+        values.put(rentConstant.C_UPDATE_TIMESTAMP,updateTimeStamp);
 
 
 
 
-        db.update(Constants.TABLE_NAME,values,Constants.C_ID + " = ?", new String[]{id});
+        db.update(rentConstant.TABLE_NAME,values,rentConstant.C_ID + " = ?", new String[]{id});
         db.close();
     }
 
@@ -86,14 +86,14 @@ public class rentDBhelper extends SQLiteOpenHelper{
     //delete information
     public void deleteInfo(String id){
         SQLiteDatabase db = getWritableDatabase();
-        db.delete(Constants.TABLE_NAME,Constants.C_ID + " = ? ",new String[]{id});
+        db.delete(rentConstant.TABLE_NAME,rentConstant.C_ID + " = ? ",new String[]{id});
         db.close();
     }
 
     public ArrayList<Model>getAllData(String orderBy){
         ArrayList<Model> arrayList = new ArrayList<>();
         //query for selecting all info in the database
-        String selectQuery = "SELECT * FROM " + Constants.TABLE_NAME + " ORDER BY " + orderBy;
+        String selectQuery = "SELECT * FROM " + rentConstant.TABLE_NAME + " ORDER BY " + orderBy;
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor cursor = db.rawQuery(selectQuery, null);
 
