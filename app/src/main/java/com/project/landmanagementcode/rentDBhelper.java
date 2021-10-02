@@ -44,14 +44,14 @@ public class rentDBhelper extends SQLiteOpenHelper{
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
-        values.put(Constants.C_RTITLE,rtitle);
+       /* values.put(Constants.C_RTITLE,rtitle);
         values.put(Constants.C_RAREA,rarea);
         values.put(Constants.C_RENTAL,rental);
         values.put(Constants.C_RDES,rdes);
         values.put(Constants.C_RSELLER,rseller);
         values.put(Constants.C_IMAGE,image);
         values.put(Constants.C_ADD_TIMESTAMP,addTimeStamp);
-        values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);
+        values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);*/
 
 
 
@@ -63,7 +63,7 @@ public class rentDBhelper extends SQLiteOpenHelper{
     }
 
     //update info function
-    public void updateInfo(String id,String image,String addTimeStamp, String updateTimeStamp) {
+    /*public void updateInfo(String id,String image,String addTimeStamp, String updateTimeStamp) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(Constants.C_RSELLER,rseller);
@@ -73,14 +73,14 @@ public class rentDBhelper extends SQLiteOpenHelper{
         values.put(Constants.C_RAREA,rarea);
         values.put(Constants.C_IMAGE,image);
         values.put(Constants.C_ADD_TIMESTAMP,addTimeStamp);
-        values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);
+        values.put(Constants.C_UPDATE_TIMESTAMP,updateTimeStamp);*/
 
 
 
 
-        db.update(Constants.TABLE_NAME,values,Constants.C_ID + " = ?", new String[]{id});
+       /* db.update(Constants.TABLE_NAME,values,Constants.C_ID + " = ?", new String[]{id});
         db.close();
-    }
+    }*/
 
 
     //delete information
@@ -99,7 +99,7 @@ public class rentDBhelper extends SQLiteOpenHelper{
 
         if(cursor.moveToNext()){
             do{
-                Model model = new Model(
+               /* Model model = new Model(
                         ""+cursor.getInt(cursor.getColumnIndex(Constants.C_ID)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_IMAGE)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_RTITLE)),
@@ -110,7 +110,7 @@ public class rentDBhelper extends SQLiteOpenHelper{
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_ADD_TIMESTAMP)),
                         ""+cursor.getString(cursor.getColumnIndex(Constants.C_UPDATE_TIMESTAMP))
                 );
-                arrayList.add(model);
+                arrayList.add(model);*/
             }while(cursor.moveToNext());
         }
         db.close();
