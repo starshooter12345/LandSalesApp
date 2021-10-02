@@ -20,11 +20,7 @@ public class Constants {
     public static final String C_IMAGE="IMAGE";
     public static final String C_ADD_TIMESTAMP="ADD_TIMESTAMP";
     public static final String C_UPDATE_TIMESTAMP="UPDATE_TIMESTAMP";
-    public static final String C_RTITLE = "RTITLE" ;
-    public static final String C_RAREA = "RAREA";
-    public static final String C_RENTAL = "RENTAL";
-    public static final String C_RDES = "RDES";
-    public static final String C_RSELLER = "RSELLER";
+
 
     //create query for table
     public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + " ("
@@ -40,11 +36,7 @@ public class Constants {
             + C_IMAGE + " TEXT,"
             + C_ADD_TIMESTAMP + " TEXT,"
             + C_UPDATE_TIMESTAMP + " TEXT"
-            + C_RTITLE + " TEXT,"
-            + C_RAREA + " TEXT,"
-            + C_RENTAL + " TEXT,"
-            + C_RDES + " TEXT,"
-            + C_RSELLER + " TEXT,"
+
             + ");";
 
 
