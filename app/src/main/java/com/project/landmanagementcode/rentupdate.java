@@ -44,7 +44,7 @@ public class rentupdate extends AppCompatActivity {
 
     private String  id,rtitle,rseller,rdes,rarea,rental, addTimeStamp, updateTimeStamp;
     private boolean editMode = false;
-    private DatabaseHelper dbHelper;
+    private rentDBhelper dbHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -113,7 +113,7 @@ public class rentupdate extends AppCompatActivity {
         cameraPermissions = new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
         storagePermissions = new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE};
 
-        dbHelper = new DatabaseHelper(this);
+        dbHelper = new rentDBhelper(this);
 
         rImageView.setOnClickListener(new View.OnClickListener() {
             @Override

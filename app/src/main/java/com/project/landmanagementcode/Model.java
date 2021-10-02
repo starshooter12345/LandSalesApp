@@ -18,6 +18,9 @@ public class Model {
         this.updateTimeStamp = updateTimeStamp;
     }
 
+    public Model(String id, String image, String landtitle, String extentinperches, String priceperperch, String landaddress, String landdescription, String sellername, String sellerphone) {
+    }
+
     public String getId() {
         return id;
     }
