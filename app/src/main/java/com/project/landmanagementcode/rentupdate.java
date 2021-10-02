@@ -30,14 +30,11 @@ import com.theartofdev.edmodo.cropper.CropImageView;
 public class rentupdate extends AppCompatActivity {
 
     Button update;
-
     private EditText rtitles, rsellers, rdess, rareas, rentals;
     ActionBar actionBar;
     private ImageView rImageView;
-
     private static final int CAMERA_REQUEST_CODE = 100;
     private static final int STORAGE_REQUEST_CODE = 101;
-
     private static final int IMAGE_PICK_CAMERA_CODE = 102;
     private static final int IMAGE_PICK_GALLERY_CODE = 103;
 
@@ -49,7 +46,6 @@ public class rentupdate extends AppCompatActivity {
     private boolean editMode = false;
     private DatabaseHelper dbHelper;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,13 +53,9 @@ public class rentupdate extends AppCompatActivity {
         actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
-
-
-
         actionBar = getSupportActionBar();
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setDisplayHomeAsUpEnabled(true);
-
 
         rtitles = findViewById(R.id.rtitle);
         rareas = findViewById(R.id.rarea);
@@ -71,7 +63,6 @@ public class rentupdate extends AppCompatActivity {
         rdess = findViewById(R.id.rdes);
         rsellers = findViewById(R.id.rseller);
         rImageView = findViewById(R.id.image);
-
         update = findViewById(R.id.addButton);
 
         Intent intent = getIntent();
@@ -87,7 +78,6 @@ public class rentupdate extends AppCompatActivity {
 
         if(editMode){
             actionBar.setTitle("Update Information");
-
             editMode = intent.getBooleanExtra("editMode",editMode);
             id = intent.getStringExtra("ID");
             rtitle = intent.getStringExtra("TITLE");
@@ -138,8 +128,6 @@ public class rentupdate extends AppCompatActivity {
                 getData();
                 startActivity(new Intent(rentupdate.this,MainActivity.class));
                 Toast.makeText(rentupdate.this,"Updated successfully",Toast.LENGTH_SHORT).show();
-
-
             }
         });
     }
@@ -153,7 +141,6 @@ public class rentupdate extends AppCompatActivity {
 
         if(editMode){
             String newUpdateTime = ""+System.currentTimeMillis();
-
             dbHelper.updateInfo(
                     "" + id,
                     ""+rtitle,
@@ -164,12 +151,10 @@ public class rentupdate extends AppCompatActivity {
                     ""+imageUri,
                     ""+addTimeStamp,
                     ""+newUpdateTime
-
             );
         }
         else {
             String timestamp = "" + System.currentTimeMillis();
-
             dbHelper.updateInfo(
                     "" + id,
                     ""+rtitle,
