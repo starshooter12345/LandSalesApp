@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class ref extends AppCompatActivity {
+public class rows extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

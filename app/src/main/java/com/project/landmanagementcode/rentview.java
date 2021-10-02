@@ -16,7 +16,7 @@ public class rentview extends AppCompatActivity {
     FloatingActionButton flac;
     ActionBar actionBar;
     RecyclerView mRecyclerView;
-    DatabaseHelper databaseHelper;
+    rentDBhelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class rentview extends AppCompatActivity {
         actionBar.setTitle("Rental properties");
 
         mRecyclerView = findViewById(R.id.recyclerView);
-        databaseHelper = new DatabaseHelper(this);
+        databaseHelper = new rentDBhelper(this);
 
         showRecord();
 
