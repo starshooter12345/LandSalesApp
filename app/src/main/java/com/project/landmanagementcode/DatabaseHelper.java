@@ -60,7 +60,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
 
         long id=db.insert(Constants.TABLE_NAME,null,values);
-        db.close();
+       // db.close();
         return id;
 
     }
@@ -90,7 +90,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
 
 
         db.update(Constants.TABLE_NAME,values,Constants.C_ID + " = ?", new String[]{id});
-        db.close();
+        //db.close();
     }
 
 
@@ -98,7 +98,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
     public void deleteInfo(String id){
         SQLiteDatabase db = getWritableDatabase();
         db.delete(Constants.TABLE_NAME,Constants.C_ID + " = ? ",new String[]{id});
-        db.close();
+      //  db.close();
     }
 
     public ArrayList<Model>getAllData(String orderBy){
@@ -127,7 +127,7 @@ public class DatabaseHelper extends SQLiteOpenHelper{
                 arrayList.add(model);
             }while(cursor.moveToNext());
         }
-        db.close();
+      //  db.close();
         return arrayList;
     }
 
