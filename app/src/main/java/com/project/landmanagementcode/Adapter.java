@@ -31,6 +31,9 @@ public class Adapter extends RecyclerView.Adapter<Adapter.Holder> {
         databaseHelper=new DatabaseHelper(context);
     }
 
+    public Adapter(rentview context, ArrayList<rentModel> allData) {
+    }
+
 
     @NonNull
     @Override

@@ -44,7 +44,7 @@ public class rentview extends AppCompatActivity {
     }
 
     private void showRecord() {
-        Adapter adapter = new Adapter(rentview.this, databaseHelper.getAllData(Constants.C_ADD_TIMESTAMP + " DESC"));
+        Adapter adapter = new Adapter(rentview.this, databaseHelper.getAllData(rentConstant.C_ADD_TIMESTAMP + " DESC"));
         mRecyclerView.setAdapter(adapter);
 
     }

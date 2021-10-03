@@ -98,8 +98,8 @@ public class rentDBhelper extends SQLiteOpenHelper{
         db.close();
     }
 
-    public ArrayList<Model>getAllData(String orderBy) {
-        ArrayList<Model> arrayList = new ArrayList<>();
+    public ArrayList<rentModel>getAllData(String orderBy) {
+        ArrayList<rentModel> arrayList = new ArrayList<>();
         //query for selecting all info in the database
         String selectQuery = "SELECT * FROM " + rentConstant.TABLE_NAME + " ORDER BY " + orderBy;
         SQLiteDatabase db = this.getWritableDatabase();
