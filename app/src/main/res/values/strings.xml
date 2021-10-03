@@ -40,7 +40,10 @@
     <string name="rphonenumber">Enter your Phone Number</string>
     <string name="nname">Kasun Lakmal</string>
 
-    //yasass
+
+
+
+    //final yasas
     <string name="app_sname">finalyasas</string>
     <string name="heading">Register as a Seller</string>
     <string name="input_name">Name :</string>
@@ -54,6 +57,24 @@
     <string name="tc">I agree with the terms and conditions</string>
     <string name="sellersubmit">Create Account</string>
     <string name="u_heading">Update Account</string>
+
+
+
+    <string name="rent">Rent out a Land</string>
+    <string name="sell">Sell a Land</string>
+    <string name="update_acc">Update Account</string>
+    <string name="delete_acc">Delete Account</string>
+    <string name="login_heading">Login</string>
+    <string name="login_email">Email</string>
+    <string name="loginemail">Email :</string>
+    <string name="login_pswd">Password :</string>
+    <string name="pt_login_email">Enter your Email here</string>
+    <string name="pt_login_pswd">Enter your Password here</string>
+    <string name="keeploggedin">Keep me logged in</string>
+    <string name="login">Login</string>
+    <string name="invalid_name">Enter valid name</string>
+    <string name="invalid_mobile">Enter valid phone number</string>
+    <string name="invalid_email">Enter valid email</string>
 
     //Shamila
     <string name="utitle">Update Title</string>
@@ -78,21 +99,8 @@
     <string name="acc_view_name">John Doe</string>
     <string name="acc_view_cn">0123456789</string>
     <string name="acc_view_email">johndoe@sample.com</string>
-    <string name="rent">Rent out a Land</string>
-    <string name="sell">Sell a Land</string>
-    <string name="update_acc">Update Account</string>
-    <string name="delete_acc">Delete Account</string>
-    <string name="login_heading">Login</string>
-    <string name="login_email">Email</string>
-    <string name="loginemail">Email :</string>
-    <string name="login_pswd">Password :</string>
-    <string name="pt_login_email">Enter your Email here</string>
-    <string name="pt_login_pswd">Enter your Password here</string>
-    <string name="keeploggedin">Keep me logged in</string>
-    <string name="login">Login</string>
-    <string name="invalid_name">Enter valid name</string>
-    <string name="invalid_mobile">Enter valid phone number</string>
-    <string name="invalid_email">Enter valid email</string>
+
+
     <string name="rtitle">rtitle</string>
     <string name="rarea">rarea</string>
     <string name="rental">rental</string>

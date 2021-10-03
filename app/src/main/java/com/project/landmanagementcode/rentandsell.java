@@ -1,23 +1,28 @@
 package com.project.landmanagementcode;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+
+
 public class rentandsell extends AppCompatActivity {
 
-    Button btnrentland, btnbuyland;
+    Button btnrentland, btnbuyland, btnaccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rentandsell);
 
-        btnbuyland = (Button) findViewById(R.id.btnbuyland);
-        btnrentland = (Button) findViewById(R.id.btnrentland);
+        String user = getIntent().getStringExtra("user");
+
+        btnbuyland = findViewById(R.id.btnbuyland);
+        btnrentland = findViewById(R.id.btnrentland);
+        btnaccount = findViewById(R.id.btnaccount);
 
 //        btnrentland.setOnClickListener(new View.OnClickListener() {
 //            @Override
@@ -31,12 +36,19 @@ public class rentandsell extends AppCompatActivity {
         btnbuyland.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(),Buyerview.class);
+                Intent intent = new Intent(getApplicationContext(), Buyerview.class);
                 startActivity(intent);
             }
         });
 
-
+        btnaccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), buyeraccount.class);
+                intent.putExtra("user", user);
+                startActivity(intent);
+            }
+        });
 
     }
 }

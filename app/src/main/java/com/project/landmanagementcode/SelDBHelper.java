@@ -2,12 +2,12 @@ package com.project.landmanagementcode;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.database.ContentObservable;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
+import java.util.ArrayList;
+import java.util.List;
 
 public class SelDBHelper extends SQLiteOpenHelper {
     public SelDBHelper(Context context) {
@@ -61,5 +61,32 @@ public class SelDBHelper extends SQLiteOpenHelper {
         else {
             return false;
         }
+    }
+
+    public void deleteSellerAccount(String sellerusername){
+        SQLiteDatabase selDB = this.getWritableDatabase();
+        selDB.execSQL("delete from Sellers where selusername= ?", new String[]{sellerusername});
+    }
+
+    public void updateSellerAccount(String username, String password, String email, String cn){
+        SQLiteDatabase selDB = this.getWritableDatabase();
+        selDB.execSQL("update Sellers SET selusername = ?, selpassword = ?, selemail = ?, selcn = ?", new String[]{username, password, email, cn});
+    }
+
+    public List<String> getSellerData(String sellerusername){
+        List <String> list = new ArrayList<>();
+        SQLiteDatabase selDB = this.getWritableDatabase();
+        Cursor cursor = selDB.rawQuery("select * from Sellers where selusername = ?", new String[]{sellerusername});
+        if (cursor.moveToNext()){
+            String username = cursor.getString(cursor.getColumnIndex("selusername"));
+            String password = cursor.getString(cursor.getColumnIndex("selpassword"));
+            String email = cursor.getString(cursor.getColumnIndex("selemail"));
+            String cn = cursor.getString(cursor.getColumnIndex("selcn"));
+            list.add(username);
+            list.add(password);
+            list.add(email);
+            list.add(cn);
+        }
+        return list;
     }
 }
